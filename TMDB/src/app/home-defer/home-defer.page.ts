@@ -18,13 +18,13 @@ import {
 } from '@ionic/angular/standalone';
 import { MovieService } from '../services/movie.service';
 import { catchError, finalize } from 'rxjs';
-import { MovieResult } from '../services/interfaces';
+import { MovieResult } from '../models/interfaces';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-home-defer',
+  templateUrl: 'home-defer.page.html',
+  styleUrls: ['home-defer.page.scss'],
   standalone: true,
   imports: [
     IonHeader,
@@ -44,7 +44,7 @@ import { RouterModule } from '@angular/router';
     IonInfiniteScrollContent,
   ],
 })
-export class HomePage {
+export class HomeDeferPage {
   private movieService = inject(MovieService);
   private currentPage = 1;
   public error = null;

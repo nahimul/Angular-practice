@@ -19,7 +19,7 @@ import {
   IonItem,
   IonAlert,
   IonBadge,
-  IonCardContent, 
+  IonCardContent,
   IonCardTitle,
   IonCardSubtitle,
   IonCardHeader,
@@ -27,11 +27,10 @@ import {
   IonText,
   IonIcon,
 } from '@ionic/angular/standalone';
-import { MovieResult } from '../services/interfaces';
+import { MovieResult } from '../models/interfaces';
 import { MovieService } from '../services/movie.service';
 import { addIcons } from 'ionicons';
 import { cashOutline, calendarOutline } from 'ionicons/icons';
-
 
 @Component({
   selector: 'app-details',
@@ -50,8 +49,8 @@ import { cashOutline, calendarOutline } from 'ionicons/icons';
     IonLabel,
     IonItem,
     IonIcon,
-   IonAlert,
-  //  IonBadge,
+    IonAlert,
+    //  IonBadge,
     IonCardContent,
     IonCardTitle,
     IonCard,
@@ -74,9 +73,8 @@ export class DetailsPage implements OnInit {
     });
   }
   constructor() {
-    addIcons({cashOutline, calendarOutline});
+    addIcons({ cashOutline, calendarOutline });
   }
 
-   
   ngOnInit() {}
 }
